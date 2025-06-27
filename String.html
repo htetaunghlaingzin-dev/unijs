@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let str="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    let pos=new Array();
+    let postion=str.indexOf("e");
+    while (postion!=-1){
+        pos.push(postion);
+        postion=str.indexOf("e",postion+1);
+    }
+    document.write(pos)
+</script>
+</html>

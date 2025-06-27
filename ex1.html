@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+  let f1=["Lily","Carnation","Orchid","Tulip"];
+  let f2=["Rose","Jasmine","Tuberose","Lavender"];
+  let flowers=[];
+  flowers=f1.concat(f2);
+  document.writeln("first: "+flowers)
+  flowers.splice(0,0,"Calla Lily","Casablanca lily");
+  document.writeln("second: "+flowers)
+  flowers.splice(5,0,"Daisy","lotus Flower","Rose Mary");
+  document.writeln("third: "+flowers)
+  alert(flowers);
+  document.writeln("fourth: "+flowers)
+  flowers.unshift(0,"hello");
+  alert(flowers);
+  document.writeln("final: "+flowers)
+</script>
+</html>

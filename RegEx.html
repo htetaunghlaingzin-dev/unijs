@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let str=prompt("Enter a string to test");
+    let pattern=/at/i;
+    if (pattern.test(str)) {
+        document.writeln("The string contains the pattern 'at'.<br>");
+    } else {
+        document.writeln("The string does not contain the pattern 'at'.<br>");
+    }
+    let st="000-00-0000";
+    var p=/\d{3}-\d{2}-\d{4}/;
+    if (p.test(st)) {
+        document.writeln("The string matches the pattern '000-00-0000'.<br>");
+    } else {
+        document.writeln("The string does not match the pattern '000-00-0000'.<br>");
+    }
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let rightNow = new Date();
+    alert("Current Date: " + rightNow);
+    let myDate=rightNow.getDate();
+    let myDay=rightNow.getDay();
+    let myMonth=rightNow.getMonth();
+    let myFullYear=rightNow.getFullYear();
+    let myHours=rightNow.getHours();
+    let myMinutes=rightNow.getMinutes();
+    let mySeconds=rightNow.getSeconds();
+    document.write(myDay+" "+myMonth+" "+myFullYear+"<br>");
+    let mName=["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+    let dName=["sun","mon","tue","wed","thu","fri","sat"];
+    if (myHours<10) {
+        myHours="0"+myHours;
+    }
+    if (myMinutes<10) {
+        myMinutes="0"+myMinutes;
+    }
+    if (mySeconds<10) {
+        mySeconds="0"+mySeconds;
+    }
+    let apm;
+    if (myHours<12){
+        apm="AM";
+    }else {
+        apm="PM";
+        if (myHours>12)
+        {
+            myHours=myHours-12;
+        }
+    }
+    document.write("my time: "+myHours+":"+myMinutes+":"+mySeconds+" "+apm+"<br>");
+</script>
+</html>
