@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Google Search Engine</h1>
+    <input type="button" value="Open Google windows" name="b1" onclick="Open_win()" >
+    <input type="button" value="Windows Resizw" name="b2" onclick="Win_resizeto()">
+    <input type="button" value="resize by Google windows" name="b3" onclick="Win_resizeby()">
+</body>
+<script !src="">
+    let mywindows;
+    function Open_win(){
+        mywindows=window.open("http://www.google.com","Google","height=100 ,width=400, resizeable=yes");
+    }
+    function  Win_resizeto(){
+        mywindows.moveTo(100,100);
+    }
+    function Win_resizeby(){
+        mywindows.resizeBy(500,500);
+    }
+</script>
+</html>

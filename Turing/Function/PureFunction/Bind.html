@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let obj={
+        name: "Jogn",
+        display(){
+            console.log("name :" ,this.name);
+        }
+    }
+    let obhj2={
+        name: "doe",
+    };
+    let m=obj.display.bind(obhj2);
+    m();
+</script>
+</html>

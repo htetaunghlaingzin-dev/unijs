@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    // function payment(){
+    //     console.log("Payment done");
+    // }
+    // function order(){
+    //     console.log("Order placed");
+    // }
+    // function  once(fn){
+    //     let status=false;
+    //     return function (){
+    //         if (!status){
+    //             fn();
+    //             status=true;
+    //         }
+    //     }
+    // }
+    // payment=once(payment);
+    // order=once(order);
+    // payment(); // Payment done
+    // payment(); // No output, function is called only once
+    // order(); // Order placed
+    // order(); // No output, function is called only once
+    // apaww ka parameter m pr dr out ka parameter htae pee thone tae nee
+    function payment(paymentid, amount){
+        console.log("Payment done", paymentid, "for amount:", amount);
+    }
+    function order(orderid, item){
+        console.log("Order placed", orderid, "for item:", item);
+    }
+    function  once(fn,callback){
+        let status=false;
+        return function (... rest){
+            if (!status){
+                fn(... rest);
+                status=true;
+            }
+            else {
+                callback();
+            }
+        }
+    }
+    payment=once(payment,()=>{console.log("payment already done")});
+    order=once(order,()=>{console.log("order already placed")});
+    payment("a12344",2000); // Payment done
+    payment("a12344",2000); // No output, function is called only once
+    order("a12344",2000); // Order placed
+    order("a12344",2000); // No output, function is called only once
+</script>
+</html>

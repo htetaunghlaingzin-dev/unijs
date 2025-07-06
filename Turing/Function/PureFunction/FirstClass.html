@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    function hi(){
+        console.log("Hello, this is a first-class function!");
+    }
+    let fun=hi;//rule1
+    //dr ka function ko htae dr
+    fun();
+    function geFun(){
+        return function (){
+            console.log("fun function");
+        }
+    }
+    fun=geFun();//rule2
+    // dr ka function htll ka return value ko htae dr
+    fun();
+    function acceptFun(fun){
+        console.log("Accepting a function as an argument:");
+        fun();
+    }
+    acceptFun(fun);//rule3
+    //dr ka function ko parameter nae pass loke dr
+    // if apaw ka rule 3 khu lone pyae soan yin first class loi pyw loi ya
+</script>
+</html>

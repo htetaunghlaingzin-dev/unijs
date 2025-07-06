@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    // Constructor function to create Person objects
+    function Person(name,age,job){
+        this.name=name;
+        this.age=age;
+        this.job=job;
+        this.sayName=function(){
+            alert(this.name);
+        };
+    }
+    let person1=new Person("John",30,"Engineer");
+    let person2=new Person("Jane",25,"Designer");
+    person1.sayName();
+    person2.sayName();
+
+</script>
+</html>

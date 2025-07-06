@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+  function add(a, b) { //parameters
+      return a + b;
+  }
+  let result = add(5, 10);//arguments are passed to the function
+  console.log("The result is: " + result); // Output: The result is: 15
+  function greet(message="hello"){
+    console.log("message is: " + message);
+  }
+  greet(); // Output: message is: hello
+  greet("peace");
+  // Restparameters
+  function summ(... x){
+    let total=0;
+    for (const item of x) {
+      total+=item;
+    }
+    return total;
+  }
+  let result1=summ(1, 2, 3, 4, 5);
+  console.log("The sum is: " + result1); // Output: The sum is: 15
+  result1=summ(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+  console.log("The sum is: " + result1); // Output: The sum is: 55
+  //function parameter(spread parameter)
+  let arr=[10,2,200,9];
+  console.log("Math.min",Math.min(... arr));
+  //array Destructuring parameters
+  function  process(arr){
+    let x=arr[0];
+    let y=arr[1];
+    console.log("x: " + x + ", y: " + y);
+  }
+  process([10, 20]);// Output: x: 10, y: 20
+  //object Destructuring parameters
+  function processObj({name, age}) {
+    console.log("Name: " + name + ", Age: " + age);
+  }
+  processObj({name: "John", age: 30}); // Output: Name: John, Age: 30
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="a">wlecome
+  <h1>hello</h1>
+    <p>this is a paragraph</p>
+</div>
+<p>Example List:</p>
+<ul>
+  <li id="item1">coffee</li>
+  <li id="item2">tea</li>
+  <li id="item3">juice</li>
+</ul>
+<button onclick="Myfunction()">try it</button>
+<p id="demo"></p>
+</body>
+<script !src="">
+  var d=document.getElementById("a");
+  alert(d.childNodes.length);
+  alert(d.firstChild.nodeName);
+  alert(d.firstChild.nodeValue);
+  alert(d.nodeName);
+  let x=d.childNodes[0];
+  alert(x.nodeValue);
+  let y=d.childNodes.item(1);
+  alert(y.nodeValue);
+  alert(y.tagName);
+  function Myfunction(){
+    let item=document.getElementById("item2").innerHTML;
+    document.getElementById("demo").innerHTML=item;
+  }
+</script>
+</html>
